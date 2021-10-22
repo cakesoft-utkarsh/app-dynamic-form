@@ -7,7 +7,7 @@ npm list npm-cli-login || npm i npm-cli-login
 echo "Build Package To publish"
 echo -n Password: 
 read -s password
-npm-cli-login -u sameer-cakesoftech -p 77777sameerj@ -e sameer@cakesofttech.com -r https://registry.npmjs.org
+npm-cli-login -u sameer-cakesoftech -p $password -e sameer@cakesofttech.com -r https://registry.npmjs.org
 cd dist/app-dynamic-form
 npm publish
 echo "success: Published package"
