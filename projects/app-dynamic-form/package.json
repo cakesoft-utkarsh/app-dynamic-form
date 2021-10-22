@@ -1,11 +1,15 @@
 {
   "name": "app-dynamic-form",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "peerDependencies": {
     "@angular/common": "^12.0.5",
     "@angular/core": "^12.0.5"
   },
   "dependencies": {
     "tslib": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cakesoft-utkarsh/app-dynamic-form.git"
   }
 }

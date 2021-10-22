@@ -20,8 +20,8 @@ Schema Url consiting of JSON schema for Form generation
 e.g.
 `
 <pre>{
-"form" : {
-"elements" : [
+    "form" : {
+        "elements" : [
             {
                 "name" : "first_name",
                 "data_type": "text",
@@ -31,13 +31,13 @@ e.g.
             },
             ....
             ... 
-]
-},
-"metadata": {
+            ]
+    },
+    "metadata": {
         "URL" : "https://skluoiwe235323.com/formvalue", <----- Submit Url
-"TableColumnSize" : 2,
-"DisplayHint": "table"
+        "TableColumnSize" : 2,
+        "DisplayHint": "table"
+    }
 }
-}
-</pre>
+<pre>
 `

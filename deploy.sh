@@ -1,7 +1,7 @@
 #/usr/bin/env bash
 
 rm -rf dist
-echo "Increment Version Inside products/app-avm-widget/package.json"
+echo "Increment Version Inside products/app-dynamic-form/package.json"
 npm install && npm run build
 npm list npm-cli-login || npm i npm-cli-login
 echo "Build Package To publish"
