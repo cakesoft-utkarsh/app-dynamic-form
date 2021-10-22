@@ -1,0 +1,38 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>FORM NAME</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngFor="let element of data!.form.elements; let i = index">
+        <div *ngIf="i % 2 == 0" class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                [placeholder]="element.display_name"
+                [type]="element.data_type"
+                [formControlName]="element.name"
+                [value]="element.value"
+              />
+            </mat-form-field>
+          </div>
+          <div *ngIf="i + 1 < data!.form.elements.length" class="col">
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                [placeholder]="data!.form.elements[i + 1].display_name"
+                [type]="data!.form.elements[i + 1].data_type"
+                [formControlName]="data!.form.elements[i + 1].name"
+                [value]="data!.form!.elements[i + 1].value"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions style="text-align: center">
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

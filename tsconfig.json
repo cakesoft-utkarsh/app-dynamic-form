@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "app-dynamic-form": [
+        "dist/app-dynamic-form/app-dynamic-form",
+        "dist/app-dynamic-form"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
