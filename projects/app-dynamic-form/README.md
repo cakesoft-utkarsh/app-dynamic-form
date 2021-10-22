@@ -20,24 +20,24 @@ Schema Url consiting of JSON schema for Form generation
 e.g.
 `
 <pre>{
-&emsp;"form" : {
-&emsp;&emsp;"elements" : [
+"form" : {
+"elements" : [
             {
-             &emsp;&emsp;   "name" : "first_name",
-               &emsp;&emsp; "data_type": "text",
-       &emsp;&emsp;         "display_name": "First name",
-             &emsp;&emsp;   "value" : "",
-              &emsp;&emsp;  "edit": "True"
-          &emsp;&emsp;  },
+                "name" : "first_name",
+                "data_type": "text",
+                "display_name": "First name",
+                "value" : "",
+                "edit": "True"
+            },
             ....
             ... 
-&emsp;&emsp;&emsp;]
-&emsp;},
-&emsp;"metadata": {
- &emsp;&emsp;       "URL" : "https://skluoiwe235323.com/formvalue", <----- Submit Url
-&emsp;&emsp;"TableColumnSize" : 2,
-&emsp;&emsp;"DisplayHint": "table"
-&emsp;}
+]
+},
+"metadata": {
+        "URL" : "https://skluoiwe235323.com/formvalue", <----- Submit Url
+"TableColumnSize" : 2,
+"DisplayHint": "table"
+}
 }
 </pre>
 `
