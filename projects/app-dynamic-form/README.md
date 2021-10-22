@@ -1,24 +1,43 @@
 # AppDynamicForm
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 
-## Code scaffolding
+# Installation
+If there is a dependency issue angular@common then use
+npm i app-dynamic-form
 
-Run `ng generate component component-name --project app-dynamic-form` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project app-dynamic-form`.
-> Note: Don't forget to add `--project app-dynamic-form` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+# Usage
+`<app-dynamic-form schema_url=<Your Schema_URL> [style.display]="!isShow ? 'block' : 'none'"></app-dynamic-form>`
 
-Run `ng build app-dynamic-form` to build the project. The build artifacts will be stored in the `dist/` directory.
+The display is optional toggle using isShow variable
 
-## Publishing
 
-After building your library with `ng build app-dynamic-form`, go to the dist folder `cd dist/app-dynamic-form` and run `npm publish`.
+# Schema Format
 
-## Running unit tests
+Schema Url consiting of JSON schema for Form generation
 
-Run `ng test app-dynamic-form` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+e.g.
+`
+<pre>{
+&emsp;"form" : {<br>
+&emsp;&emsp;"elements" : [<br>
+            {<br>
+             &emsp;&emsp;   "name" : "first_name",<br>
+               &emsp;&emsp; "data_type": "text",<br>
+       &emsp;&emsp;         "display_name": "First name",<br>
+             &emsp;&emsp;   "value" : "",<br>
+              &emsp;&emsp;  "edit": "True"<br>
+          &emsp;&emsp;  },<br>
+            ....
+            ... <br>
+&emsp;&emsp;&emsp;]<br>
+&emsp;},<br>
+&emsp;"metadata": {<br>
+ &emsp;&emsp;       "URL" : "https://skluoiwe235323.com/formvalue", <----- Submit Url<br>
+&emsp;&emsp;"TableColumnSize" : 2,<br>
+&emsp;&emsp;"DisplayHint": "table"<br>
+&emsp;}<br>
+}
+</pre>
+`
