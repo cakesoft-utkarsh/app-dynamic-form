@@ -1,3 +1,4 @@
+<div style="text-align:center;margin: auto;">
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
   <mat-card class="shipping-card">
     <mat-card-header>
@@ -14,6 +15,7 @@
                 [type]="element.data_type"
                 [formControlName]="element.name"
                 [value]="element.value"
+                [class.invalid]="myForm.invalid"
               />
             </mat-form-field>
           </div>
@@ -25,6 +27,7 @@
                 [type]="data!.form.elements[i + 1].data_type"
                 [formControlName]="data!.form.elements[i + 1].name"
                 [value]="data!.form!.elements[i + 1].value"
+                [class.invalid]="myForm.invalid"  
               />
             </mat-form-field>
           </div>
@@ -36,3 +39,4 @@
     </mat-card-actions>
   </mat-card>
 </form>
+</div>

@@ -46,7 +46,25 @@ export class AppDynamicFormComponent implements OnInit {
   createForm(data: RootObject) {
     for (const element of data.form.elements) {
       const validatorsToAdd = [];
-      validatorsToAdd.push(Validators.required);
+      if(element.data_type=="text")
+      {
+        validatorsToAdd.push(Validators.min(3));
+      }
+      if(element.data_type=="date")
+      {
+        const date_regex = /^\d{2}\/\d{2}\/\d{4}$/ ;
+        validatorsToAdd.push(Validators.pattern(date_regex));
+      }
+      if(element.data_type=="float")
+      {
+        const float_regex = /^\d+\.\d{0,2}$/;
+        validatorsToAdd.push(Validators.pattern(float_regex));
+      }
+      if(element.display_name=="email")
+      {
+        validatorsToAdd.push(Validators.email);
+      }
+        validatorsToAdd.push(Validators.required);
       this.myForm.addControl(
         element.name,
         this.fb.control(element.value, validatorsToAdd)
@@ -66,9 +84,8 @@ export class AppDynamicFormComponent implements OnInit {
       .then((dataJson) => {
         this.data = JSON.parse(dataJson.contents) as RootObject;
         console.log('WHRE is this', this.data);
+        this.createForm(this.data);
       });
-
-    this.createForm(this.data);
   }
   onSubmit() {
     console.log('Form valid: ', this.myForm.valid);
